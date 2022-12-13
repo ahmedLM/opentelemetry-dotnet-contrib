@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- OmniSharp/VS Code requires TargetFrameworks to be in descending order for IntelliSense and analysis. -->
-    <TargetFrameworks>$(NetFrameworkMinimumSupportedVersion)</TargetFrameworks>
+    <TargetFrameworks>$(NetFrameworkMinimumSupportedVersion);net48</TargetFrameworks>
     <Description>A module that instruments incoming request with System.Diagnostics.Activity and notifies listeners with DiagnosticsSource.</Description>
     <PackageTags>$(PackageTags);distributed-tracing;AspNet;MVC;WebAPI</PackageTags>
     <MinVerTagPrefix>Instrumentation.AspNet.TelemetryHttpModule-</MinVerTagPrefix>
+    <PackageOutputPath>..\..\..\opentelemetry-dotnet\packages</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenTelemetry.Api" Version="$(OpenTelemetryCoreLatestVersion)" />
+    <PackageReference Include="OpenTelemetry.Api" Version="0.0.0-alpha.0.2135" />
   </ItemGroup>
 </Project>
